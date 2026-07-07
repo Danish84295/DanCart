@@ -14,6 +14,7 @@ const getProductById =async(req,res)=>{
     try{
         const product = await productModel.findById(req.params.id);
         if(product){
+            // console.log(product);
             res.json(product);
         }
         else{
@@ -26,7 +27,7 @@ const getProductById =async(req,res)=>{
 
 const createProduct = async(req,res)=>{
     try{
-        const {name,description,price, category, stock,}= req.body;
+        const {name,description,price, category, stock}= req.body;
         let imageUrl = '';
         if(req.file){
             const result = await cloudinary.uploader.upload(req.file.path);
@@ -73,7 +74,7 @@ const updateProduct = async  (req,res)=>{
         }
     }
     catch(error){
-        console.log(error);
+        console.error(error);
         res.status(500).json({message: 'Server error'});
     }
 };

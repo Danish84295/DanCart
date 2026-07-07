@@ -18,7 +18,7 @@ const orderSchema = new mongoose.Schema({
         country:{type:String, required:true}
     },
     paymentId:{type:String},
-    status:{type:String,enum:['pending',"shipped","delivered"],default:'pending' },
+    status:{type:String,enum:['Pending',"Shipped","Delivered"],default:'Pending' },
 
 },{timestamps:true});
 

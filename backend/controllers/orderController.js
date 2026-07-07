@@ -1,15 +1,15 @@
 const orderModel = require('../model/Order');
-
+const productModel = require('../model/Product');
 const sendEmail =require('../utils/sendEmail');
 
 //create order
 const createOrder = async (req,res)=>{
     try{
-        console.log('run');
         const {items,totalAmount,address,paymentId}=req.body;
         if(!items || items.length===0 || !totalAmount || !address){
             return res.status(400).json({message:'Invalid order data'});
         }
+        
         else{
             const order =new  orderModel({
                 user:req.user._id,
@@ -19,6 +19,24 @@ const createOrder = async (req,res)=>{
                 paymentId
             });
             await order.save();
+
+            for(const item of items){
+                const product =await productModel.findById(item.productId);
+
+                if(!product){
+                    return res.status(404).json({
+                        message:"Product not found"
+                    });
+                }
+
+                if(product.stock<item.qty){
+                    return res.status(400).json({
+                        message: `${product.name} is out of stock`
+                    });
+                }
+                product.stock-=item.qty;
+                await product.save();
+            }
 
             const message = `Dear ${req.user.name},
             Thank you for shopping with DanCart!
@@ -45,6 +63,7 @@ const createOrder = async (req,res)=>{
         }
     }
     catch(error){
+        console.error("created order error: ", error);
         res.status(500).json({message:'Error creating order',error});
     }
 };
