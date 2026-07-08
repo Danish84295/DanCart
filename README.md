@@ -2,8 +2,14 @@
   <img src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png" alt="DanCart Logo" width="80" />
   <h1>DanCart - Full-Stack MERN E-Commerce App</h1>
   <p>A professionally engineered, full-stack E-commerce platform built using the MERN Stack with React, Express.js, MongoDB, and Node.js.</p>
+
+  <p>
+    <a href="https://dancart.onrender.com"><strong>🚀 Live Demo</strong></a> •
+    <a href="https://github.com/Danish84295/DanCart"><strong>📂 GitHub Repository</strong></a>
+  </p>
 </div>
 
+---
 ---
 
 # 🛠 Tech Stack
