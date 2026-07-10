@@ -12,6 +12,11 @@ const Home = () => {
         console.log("fetching starts");
         const res = await fetch('/api/products');
         console.log('fetching is end')
+        
+        if (!res.ok) {
+    throw new Error(`HTTP Error: ${res.status}`);
+}
+        
         const data = await res.json();
         console.log("hello",data);
         setProducts(data.slice()); // Featured products
