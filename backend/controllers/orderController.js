@@ -44,7 +44,7 @@ const createOrder = async (req,res)=>{
             📦 Order Details
             --------------------------------
             Order ID: ${order._id}
-            Total Amount: ₹${order.totalAmount}
+            Total Amount: $${order.totalAmount}
             Payment Method: ${order.paymentId}
             Order Status: ${order.status}
             --------------------------------
@@ -58,8 +58,8 @@ const createOrder = async (req,res)=>{
             🌐 Happy Shopping!
             `;
 
-            await sendEmail(req.user.email, 'Order Created', message);
             res.status(201).json({message:'Order created successfully',order});
+            sendEmail(req.user.email, 'Order Created', message).catch(err => console.error("Email Error:", err));
         }
     }
     catch(error){

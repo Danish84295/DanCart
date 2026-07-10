@@ -119,6 +119,7 @@ const Checkout = () => {
 //     2
 //   )
 // );
+    console.time("save order");
     const saveOrderRes = await fetch('/api/orders', {
       method: 'POST',
       headers: {
@@ -132,6 +133,7 @@ const Checkout = () => {
         paymentId: 'bypass_txn_' + Date.now()
       })
     });
+    console.timeEnd("save order");
 
     // console.log("Status:", saveOrderRes.status);
 
