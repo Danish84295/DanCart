@@ -12,6 +12,87 @@
 ---
 ---
 
+---
+
+# 📸 Project Screenshots
+
+> Replace the image paths below with your own screenshots.
+
+## 🏠 Home Page
+
+<p align="center">
+  <img src="./screenshots/home1.png" alt="Home Page" width="900">
+</p>
+
+---
+
+## 🔍 Product Details
+
+<p align="center">
+  <img src="./screenshots/home2.png" alt="Home Page" width="900">
+  <img src="./screenshots/home3.png" alt="Home Page" width="900">
+</p>
+
+---
+
+## 🛒 Shopping Cart
+
+<p align="center">
+  <img src="./screenshots/cart.png" alt="Shopping Cart" width="900">
+</p>
+
+---
+
+## 💳 Checkout Page
+
+<p align="center">
+  <img src="./screenshots/checkout.png" alt="Checkout Page" width="900">
+</p>
+
+---
+
+## 📦 Order Success
+
+<p align="center">
+  <img src="./screenshots/ordersuccessfull.png" alt="Order Success" width="900">
+</p>
+
+---
+
+## 📋 My Orders History
+
+<p align="center">
+  <img src="./screenshots/orderhistory.png" alt="Orders" width="900">
+</p>
+
+---
+
+## 👨‍💼 Admin Dashboard
+
+<p align="center">
+  <img src="./screenshots/admindashboard.png" alt="Admin Dashboard" width="900">
+</p>
+
+## 👨‍💼 Admin Manage order
+
+<p align="center">
+  <img src="./screenshots/manageorder.png" alt="Admin Dashboard" width="900">
+</p>
+
+## 👨‍💼 Admin Manage Products
+
+<p align="center">
+  <img src="./screenshots/manageproducts.png" alt="Admin Dashboard" width="900">
+</p>
+
+## 👨‍💼 User Directory
+
+<p align="center">
+  <img src="./screenshots/userdirectory.png" alt="Admin Dashboard" width="900">
+</p>
+
+---
+
 # 🛠 Tech Stack
 
 - **Frontend:** React.js, Redux Toolkit, Context API, React Router
